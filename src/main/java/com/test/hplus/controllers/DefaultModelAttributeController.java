@@ -11,14 +11,14 @@ import java.util.List;
 @ControllerAdvice
 public class DefaultModelAttributeController {
 
-    @ModelAttribute("newuser")
+    @ModelAttribute("newUser")
     public User getDefaultUser(){
         return new User();
     }
 
     @ModelAttribute("genderItems")
     public List<String> getGenderItems(){
-        return Arrays.asList(new String[]{"Male", "Female", "Other"});
+        return Arrays.asList("Male", "Female", "Other");
     }
 
     @ModelAttribute("login")

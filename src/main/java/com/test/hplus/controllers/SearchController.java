@@ -2,6 +2,7 @@ package com.test.hplus.controllers;
 
 import com.test.hplus.beans.Product;
 import com.test.hplus.repository.ProductRepository;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.task.AsyncTaskExecutor;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,8 @@ import java.util.List;
 
 @Controller
 public class SearchController {
+
+    private static final Logger logger = Logger.getLogger(SearchController.class);
 
     private ProductRepository productRepository;
 
@@ -34,13 +37,13 @@ public class SearchController {
     @GetMapping("/search")
     public DeferredResult<String> search(@RequestParam("search") String search, Model model, HttpServletRequest request){
         DeferredResult<String> deferredResult = new DeferredResult<>();
-        System.out.println("in search controller");
-        System.out.println("search criteria: "+search);
-        System.out.println("Async supported in application: "+request.isAsyncSupported());
-        System.out.println("Thread from the servlet container: "+Thread.currentThread().getName());
+        logger.info("In search controller.\n" +
+                "Search criteria: " + search +
+                ".\nAsync supported in application: " + request.isAsyncSupported() +
+                ".\nThread from the servlet container: " + Thread.currentThread().getName());
 
         taskExecutor.execute(() -> {
-            System.out.println("Thread from the spring mvc task executor: "+Thread.currentThread().getName());
+            logger.info("Thread from the Spring MVC task executor: " + Thread.currentThread().getName());
             List<Product> products = productRepository.searchByName(search);
             model.addAttribute("products", products);
             deferredResult.setResult("search");

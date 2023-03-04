@@ -1,5 +1,6 @@
 package com.test.hplus.interceptors;
 
+import org.apache.log4j.Logger;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -9,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
 public class LoginInterceptor extends HandlerInterceptorAdapter {
+
+    private final static Logger logger = Logger.getLogger(LoginInterceptor.class);
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -21,12 +24,12 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
                 }
             }
         }
-        System.out.println("Incoming request data log: session " + sessionId + " at " + new Date() + " for " + request.getRequestURI());
+        logger.info("Incoming request data log: session " + sessionId + " on " + new Date() + " for " + request.getRequestURI());
         return true;
     }
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView model) throws Exception{
-        System.out.println("In post handle");
+        logger.info("In post handle");
     }
 }

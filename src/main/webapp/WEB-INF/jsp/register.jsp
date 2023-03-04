@@ -1,10 +1,11 @@
-<!DOCTYPE html>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>H+ Sport</title>
-	<link rel="stylesheet" href="/css/style.css"/>
+	<link rel="stylesheet" href="<spring:theme code='styleSheet'/>" type="text/css"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -41,7 +42,7 @@
 	<section id="registration" class="section">
 	 <div class="container tagline">
 	 <em>Register User</em><br/>
-    		 <form:form method="post" action="/registeruser" modelAttribute="newuser">
+    		 <form:form method="post" action="/registerUser" modelAttribute="newUser">
     			<label>Username</label> <form:input path="username" type="text" /><form:errors path="username" cssClass="error"/><br/>
     			<label>Password</label> <form:input path="password" type="password" /><form:errors path="password" cssClass="error"/><br/>
     			<label>First Name</label> <form:input path="firstName" type="text" /><form:errors path="firstName" cssClass="error"/><br/>

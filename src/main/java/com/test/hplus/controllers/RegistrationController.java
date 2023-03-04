@@ -2,6 +2,7 @@ package com.test.hplus.controllers;
 
 import com.test.hplus.beans.User;
 import com.test.hplus.repository.UserRepository;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -19,6 +20,8 @@ import java.util.Date;
 @Controller
 public class RegistrationController {
 
+    private static final Logger logger = Logger.getLogger(RedirectionController.class);
+
     private UserRepository userRepository;
 
     @Autowired
@@ -31,15 +34,13 @@ public class RegistrationController {
        binder.registerCustomEditor(Date.class, "dateOfBirth", new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"), true));
     }
 
-    @PostMapping("/registeruser")
-    public String registerUser(@Valid @ModelAttribute("newuser")User user, BindingResult result, Model model){
+    @PostMapping("/registerUser")
+    public String registerUser(@Valid @ModelAttribute("newUser")User user, BindingResult result, Model model){
         System.out.println("in registration controller");
-        System.out.println(user.getDateOfBirth());
-
+        logger.info("In registration controller.\nUser date of birth format log: " + user.getDateOfBirth());
         if(result.hasErrors()){
             return "register";
         }
-
         userRepository.save(user);
         model.addAttribute("dataSaved", "User registered successfully");
         return "login";

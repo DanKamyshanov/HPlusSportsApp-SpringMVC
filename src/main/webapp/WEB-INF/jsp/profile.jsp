@@ -1,8 +1,9 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>HPlus</title>
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<spring:theme code='styleSheet'/>" type="text/css"/>
 <meta charset="ISO-8859-1">
 </head>
 <body>
@@ -106,6 +107,7 @@
                 <p class="card-text">Michael Lewiston is a multi-faceted <em>creative person</em> who began his career as a designer for a small business firm, while also working as an independent <em>painter and sculptor</em>. In 2007, Henry Twill was impressed by Michael’s creative work in a national ad campaign for a high profile sports apparel company. Henry approached Michael, and asked him to <em>manage creative direction</em> for the H+ Sport ACTIVE apparel line.</p>
             </div><!-- person-card -->
         </div><!-- container -->
+    </div>
 </section><!-- people -->
 
 
@@ -139,6 +141,6 @@
         <p class="legal">H+ Sport is a fictitious brand created by lynda.com solely for the purpose of training. All products and people associated with H+ Sport are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
     </div><!-- container -->
 </footer><!-- footer -->
-
+</section>
 </body>
 </html>

@@ -19,23 +19,25 @@ public class User {
     @Id
     private int id;
 
-    @Size(min=6, message = "{username.cannot.be.less.than.six.characters}")
+    @Size(min=6, message = "{username.requirements}")
     private String username;
 
-    @Pattern(regexp = "((?=.*[A-Z]).{6,10})", message = "Password must have one upper case, one lower case and should be between 6 and 10 characters")
+    @Pattern(regexp = "((?=.*[A-Z]).{6,10})", message = "{password.requirements}")
     private String password;
 
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
-    @NotNull(message = "Activity cannot be left empty")
+    @NotNull(message = "{activity.warning}")
     private String activity;
 
-    @NotEmpty(message = "First name cannot be empty")
+    @NotEmpty(message = "{firstName.warning}")
     private String firstName;
 
+    @NotEmpty(message = "{lastName.warning}")
     private String lastName;
 
+    @NotNull(message = "{dateOfBirth.warning}")
     private Date dateOfBirth;
 
 }

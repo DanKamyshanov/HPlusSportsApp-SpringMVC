@@ -1,0 +1,58 @@
+2023-03-04 19:26:09 INFO  SearchController:45 - In search controller.
+Search criteria: chocolate.
+Async supported in application: true.
+Thread from the servlet container: http-nio-8080-exec-3
+2023-03-04 19:40:07 INFO  LoginInterceptor:27 - Incoming request data log: session 6F5244727AFAE0753358B75C41E270C6 on Sat Mar 04 19:40:07 EET 2023 for /home
+2023-03-04 19:40:07 INFO  HomeController:14 - In home controller
+2023-03-04 19:40:07 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:40:09 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:40:09 EET 2023 for /goToLogin
+2023-03-04 19:40:09 INFO  HomeController:26 - Going to login page
+2023-03-04 19:40:09 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:40:11 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:40:11 EET 2023 for /goToSearch
+2023-03-04 19:40:11 INFO  HomeController:20 - Going to search page
+2023-03-04 19:40:11 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:40:15 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:40:15 EET 2023 for /search
+2023-03-04 19:40:15 INFO  SearchController:40 - In search controller.
+Search criteria: water.
+Async supported in application: true.
+Thread from the servlet container: http-nio-8080-exec-4
+2023-03-04 19:40:15 INFO  SearchController:46 - Thread from the Spring MVC task executor: hplusapp-thread-1
+2023-03-04 19:40:15 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:40:15 EET 2023 for /search
+2023-03-04 19:40:15 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:40:21 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:40:21 EET 2023 for /search
+2023-03-04 19:40:21 INFO  SearchController:40 - In search controller.
+Search criteria: strawberry.
+Async supported in application: true.
+Thread from the servlet container: http-nio-8080-exec-6
+2023-03-04 19:40:21 INFO  SearchController:46 - Thread from the Spring MVC task executor: hplusapp-thread-1
+2023-03-04 19:40:21 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:40:21 EET 2023 for /search
+2023-03-04 19:40:21 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:40:24 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:40:24 EET 2023 for /redirectToLinkedIn
+2023-03-04 19:40:24 INFO  RedirectionController:14 - In redirect controller
+2023-03-04 19:40:24 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:40:28 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:40:28 EET 2023 for /goToLogin
+2023-03-04 19:40:28 INFO  HomeController:26 - Going to login page
+2023-03-04 19:40:28 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:40:28 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:40:28 EET 2023 for /goToRegistration
+2023-03-04 19:40:28 INFO  HomeController:32 - Going to registration page
+2023-03-04 19:40:28 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:40:50 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:40:50 EET 2023 for /registerUser
+2023-03-04 19:40:50 INFO  RedirectionController:40 - In registration controller.
+User date of birth format log: Fri Nov 11 00:00:00 EET 2022
+2023-03-04 19:40:50 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:41:00 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:41:00 EET 2023 for /registerUser
+2023-03-04 19:41:00 INFO  RedirectionController:40 - In registration controller.
+User date of birth format log: Fri Nov 11 00:00:00 EET 2022
+2023-03-04 19:41:00 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:41:08 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:41:08 EET 2023 for /login
+2023-03-04 19:41:08 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:41:08 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:41:08 EET 2023 for /userprofile
+2023-03-04 19:41:08 INFO  UserProfileController:17 - In user profile controller.
+Username from session: test123
+2023-03-04 19:41:08 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:41:12 INFO  LoginInterceptor:27 - Incoming request data log: session 68D8E374D89422DF5C06C49F17C3A1D7 on Sat Mar 04 19:41:12 EET 2023 for /logout
+2023-03-04 19:41:12 INFO  LogoutController:16 - Ending user session
+2023-03-04 19:41:12 INFO  LoginInterceptor:33 - In post handle
+2023-03-04 19:41:13 INFO  LoginInterceptor:27 - Incoming request data log: session 49CA8C8CDB1F12C259F9BB48673C74E0 on Sat Mar 04 19:41:13 EET 2023 for /home
+2023-03-04 19:41:13 INFO  HomeController:14 - In home controller
+2023-03-04 19:41:13 INFO  LoginInterceptor:33 - In post handle
